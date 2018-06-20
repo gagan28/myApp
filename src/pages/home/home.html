@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-segment [(ngModel)]="Events">
+      <ion-segment-button value="upcominge">
+       Upcoming Events
+      </ion-segment-button>
+      <ion-segment-button value="starrede">
+        Starred Events
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div [ngSwitch]="Events">
+    <ion-list *ngSwitchCase="'upcominge'">
+        <ion-card (click)="InEvents()">
+            <img src="http://www.iageproject.eu/publish/pages/69340/keyboard.jpg"/>
+            <ion-card-content>
+              <ion-card-title no-padding no-margin>
+                Nine Inch Nails Live
+                <!-- <ion-icon style="font-size:30px; margin:15px;" name="heart"></ion-icon> -->
+                </ion-card-title>
+              <p>
+                The most popular industrial group ever, and largely
+                responsible for bringing the music to a mass audience.
+              </p>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col col-1></ion-col>
+                    <ion-col col-2>
+                        <ion-icon color="danger" name="heart"></ion-icon>
+                    </ion-col>
+                    <ion-col col-2>
+                    </ion-col>                    
+                
+                    <ion-col col-2>
+                        <ion-icon color="primary" name="add"></ion-icon>
+                    </ion-col>
+                    
+                    <ion-col col-2>
+                    </ion-col>
+                    <ion-col col-2>
+                        <ion-icon name="alert"></ion-icon>                            
+                      </ion-col>
+                    <ion-col col-1>
+                    </ion-col>
+                      
+                  </ion-row>
+                </ion-grid>                     
+                
+                <!-- <ion-grid>
+                  <ion-row>
+                   <div class="hell"> <ion-col col-3>
+                      <ion-icon name="heart"></ion-icon>
+                    </ion-col></div>
+                    <div class="hello"><ion-col col-3>
+                      <ion-icon name="add"></ion-icon>
+                    </ion-col></div>
+                    <div class="helli"><ion-col col-3>
+                      <ion-icon name="alert"></ion-icon>
+                    </ion-col></div>
+                  </ion-row>
+                </ion-grid> -->
+            </ion-card-content>
+          </ion-card>
+    </ion-list>
+    <ion-list *ngSwitchCase="'upcominge'">
+      <ion-card (click)="InEvents()">
+        <img src="https://static.meraevents.com/content/eventbanner/160901/1207624a-616c-4115-9efd-daa5cb9cfde81523508310lyuoz.jpeg"/>
+        <ion-card-content>
+          <ion-card-title no-padding no-margin>
+            Freedom Run 2nd Edition
+            <!-- <ion-icon style="font-size:30px; margin:15px;" name="heart"></ion-icon> -->
+            </ion-card-title>
+          <p>
+            The most popular 
+          </p>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-1></ion-col>
+              <ion-col col-2>
+                  <ion-icon color="danger" name="heart"></ion-icon>
+              </ion-col>
+              <ion-col col-2>
+              </ion-col>                    
+          
+              <ion-col col-2>
+                  <ion-icon color="primary" name="add"></ion-icon>
+              </ion-col>
+              
+              <ion-col col-2>
+              </ion-col>
+              <ion-col col-2>
+                  <ion-icon name="alert"></ion-icon>                            
+                </ion-col>
+              <ion-col col-1>
+              </ion-col>
+                
+            </ion-row>
+          </ion-grid>              
+        </ion-card-content>
+      </ion-card>
+</ion-list>
+
+    <ion-list *ngSwitchCase="'starrede'">
+        <ion-card (click)="InEvents()">
+            <img src="http://www.iageproject.eu/publish/pages/69340/keyboard.jpg"/>
+            <ion-card-content>
+              <ion-card-title>
+                Nine Inch Nails Live
+                </ion-card-title>
+              <p>
+                The most popular industrial group ever, and largely
+                responsible for bringing the music to a mass audience.
+              </p>
+            
+            </ion-card-content>
+
+          </ion-card>
+    </ion-list>
+  </div>
+</ion-content>
